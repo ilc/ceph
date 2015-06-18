@@ -81,6 +81,9 @@ BuildRequires:	python-sphinx10
 %endif
 %if 0%{?fedora} || 0%{defined suse_version} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
 BuildRequires:	python-sphinx
+BuildRequires:	net-tools
+BuildRequires:	sharutils
+BuildRequires:	git
 %endif
 
 BuildRequires:	python-virtualenv
@@ -101,10 +104,7 @@ BuildRequires:	sharutils
 %endif
 
 %if 0%{defined suse_version}
-BuildRequires:	net-tools
 BuildRequires:	libbz2-devel
-BuildRequires:	sharutils
-BuildRequires:	git
 %if 0%{?suse_version} > 1210
 Requires:	gptfdisk
 %if 0%{with tcmalloc}
